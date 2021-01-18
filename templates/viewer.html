@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View TikTok</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<script>
+  window.latest = "";
+  fetch("/latest")
+    .then(r => r.text())
+    .then(b => {
+      window.latest = b;
+    });
+
+  setInterval(() => {
+    fetch("/latest")
+      .then(r => r.text())
+      .then(b => {
+        if (b != window.latest) {
+          window.location.reload(true);
+        }
+      });
+  }, 1000);
+</script>
+</head>
+<body>
+{% include 'embed.html' %}
+</body>
+</html>
