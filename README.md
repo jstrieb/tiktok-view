@@ -29,4 +29,6 @@ synced link, connect to `http://localhost:5000/viewer`.
 # Project Status
 
 This project was a one-off application, written quickly. It will not be
-maintained. It has minimal documentation.
+maintained. It has minimal documentation. You can submit issues if you have
+them for documentation purposes, but do not expect a response or fix. Do not
+expect pull requests to be merged, either.
